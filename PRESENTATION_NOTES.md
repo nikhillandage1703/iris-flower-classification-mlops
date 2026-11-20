@@ -1,7 +1,7 @@
 # 🎤 PROJECT PRESENTATION & LIVE DEMO SCRIPT
 ## Iris Flower Classification Using MLOps
 **Degree:** B.Tech Artificial Intelligence and Data Science (T.Y. AIDS)  
-**Presenter:** Yash Mimrot  
+**Presenter:** Nikhil Landage  
 **Institution:** Government College of Engineering, Kolhapur  
 
 ---

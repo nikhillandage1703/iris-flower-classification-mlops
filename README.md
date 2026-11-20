@@ -1,6 +1,6 @@
 # 🌸 Iris Flower Classification Using MLOps
 
-[![CI/CD Pipeline](https://github.com/YashMimrot/iris-flower-classification-mlops/actions/workflows/ci-cd.yml/badge.svg)](https://github.com/YashMimrot/iris-flower-classification-mlops/actions)
+[![CI/CD Pipeline](https://github.com/nikhillandage1703@gmail.com/iris-flower-classification-mlops/actions/workflows/ci-cd.yml/badge.svg)](https://github.com/nikhillandage1703@gmail.com/iris-flower-classification-mlops/actions)
 [![Python 3.11+](https://img.shields.io/badge/Python-3.11%20%7C%203.12%20%7C%203.13-blue.svg)](https://www.python.org/)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.110+-009688.svg)](https://fastapi.tiangolo.com/)
 [![DVC](https://img.shields.io/badge/DVC-3.48+-945DD6.svg)](https://dvc.org/)
@@ -378,6 +378,6 @@ Evaluated on the exact stratified holdout test split ($n=30$ samples, $10$ per c
 ---
 
 ## 👨‍💻 Project Developer & Academic Attributions
-- **Student Developer:** Yash Mimrot
+- **Student Developer:** Nikhil Landage
 - **Branch:** Third-Year Artificial Intelligence & Data Science Engineering (T.Y. AIDS)
 - **Institution:** Government College of Engineering, Kolhapur

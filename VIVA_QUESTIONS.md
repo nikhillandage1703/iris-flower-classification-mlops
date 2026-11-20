@@ -1,7 +1,7 @@
 # 🎓 VIVA VOCE & ORAL EXAMINATION PREPARATION GUIDE
 ## Iris Flower Classification Using MLOps
 **Project Level:** Third-Year Engineering (T.Y. AIDS)  
-**Author:** Yash Mimrot  
+**Author:** Nikhil Landage  
 **Institution:** Government College of Engineering, Kolhapur  
 
 ---

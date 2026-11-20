@@ -1,7 +1,7 @@
 # 🏛️ SYSTEM ARCHITECTURE & DATA FLOW SPECIFICATION
 ## Iris Flower Classification Using MLOps
 **Degree:** B.Tech Artificial Intelligence and Data Science (T.Y. AIDS)  
-**Author:** Yash Mimrot  
+**Author:** Nikhil Landage  
 **Institution:** Government College of Engineering, Kolhapur  
 
 ---

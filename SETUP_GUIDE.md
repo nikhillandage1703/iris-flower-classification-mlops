@@ -1,7 +1,7 @@
 # 🛠️ WINDOWS 11 STEP-BY-STEP SETUP GUIDE
 ## Iris Flower Classification Using MLOps
 **Operating System:** Windows 11 (PowerShell)  
-**Author:** Yash Mimrot  
+**Author:** Nikhil Landage  
 **Institution:** Government College of Engineering, Kolhapur  
 
 This guide provides exact, copy-paste PowerShell instructions to configure, run, and test the entire project locally on a Windows 11 machine without requiring paid cloud subscriptions.

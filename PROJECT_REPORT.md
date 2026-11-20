@@ -2,7 +2,7 @@
 ## Iris Flower Classification Using MLOps
 **Degree:** Bachelor of Technology (B.Tech) in Artificial Intelligence and Data Science  
 **Academic Year:** Third-Year Engineering (T.Y. AIDS)  
-**Author:** Yash Mimrot  
+**Author:** Nikhil Landage  
 **Institution:** Government College of Engineering, Kolhapur  
 
 ---
