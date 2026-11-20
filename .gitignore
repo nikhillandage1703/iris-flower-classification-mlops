@@ -1,0 +1,30 @@
+# Virtual Environment
+.venv/
+venv/
+ENV/
+env/
+
+# Python Bytecode & Cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Operating System & IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# MLflow tracking local artifacts and databases
+mlruns/
+mlflow.db
+*.db
+*.sqlite
+
+# DVC local files
+.dvc/cache/
+.dvc/tmp/

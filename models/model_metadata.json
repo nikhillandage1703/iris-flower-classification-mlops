@@ -1,0 +1,36 @@
+{
+  "project_name": "Iris-Flower-Classification-MLOps",
+  "best_model_name": "random_forest",
+  "best_model_display": "Random Forest Classifier",
+  "algorithm": "RandomForestClassifier",
+  "mlflow_run_id": "2e3f4842bff9411bb9914943f132b545",
+  "mlflow_experiment": "Iris_Classification_Experiment",
+  "training_timestamp": "2026-11-20T17:43:22.502255+00:00",
+  "feature_names": [
+    "sepal_length",
+    "sepal_width",
+    "petal_length",
+    "petal_width"
+  ],
+  "class_names": [
+    "Iris-setosa",
+    "Iris-versicolor",
+    "Iris-virginica"
+  ],
+  "test_size": 0.2,
+  "random_state": 42,
+  "best_model_hyperparameters": {
+    "n_estimators": 100,
+    "criterion": "gini",
+    "max_depth": 4,
+    "min_samples_split": 2,
+    "min_samples_leaf": 1,
+    "random_state": 42
+  },
+  "best_model_metrics": {
+    "accuracy": 0.9666666666666667,
+    "precision_weighted": 0.9696969696969696,
+    "recall_weighted": 0.9666666666666667,
+    "f1_score_weighted": 0.9665831244778613
+  }
+}

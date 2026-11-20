@@ -1,0 +1,44 @@
+base:
+  project_name: "Iris-Flower-Classification-MLOps"
+  random_state: 42
+  target_column: "target"
+  class_names:
+    - "Iris-setosa"
+    - "Iris-versicolor"
+    - "Iris-virginica"
+
+data_load:
+  raw_data_path: "data/raw/iris.csv"
+
+preprocess:
+  raw_data_path: "data/raw/iris.csv"
+  train_data_path: "data/processed/train.csv"
+  test_data_path: "data/processed/test.csv"
+  test_size: 0.2
+  stratify: true
+  random_state: 42
+
+train:
+  train_data_path: "data/processed/train.csv"
+  test_data_path: "data/processed/test.csv"
+  models_dir: "models"
+  reports_dir: "reports"
+  figures_dir: "reports/figures"
+  decision_tree:
+    criterion: "gini"
+    max_depth: 4
+    min_samples_split: 2
+    min_samples_leaf: 1
+    random_state: 42
+  random_forest:
+    n_estimators: 100
+    criterion: "gini"
+    max_depth: 4
+    min_samples_split: 2
+    min_samples_leaf: 1
+    random_state: 42
+
+mlflow:
+  experiment_name: "Iris_Classification_Experiment"
+  tracking_uri: "sqlite:///mlflow.db"
+  artifact_location: "mlruns"

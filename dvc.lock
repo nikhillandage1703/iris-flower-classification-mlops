@@ -1,0 +1,157 @@
+schema: '2.0'
+stages:
+  load_data:
+    cmd: python src/data/load_data.py
+    deps:
+    - path: config/config.py
+      hash: md5
+      md5: 9beefc09e6c403482a748bec5f209d41
+      size: 1923
+    - path: src/data/load_data.py
+      hash: md5
+      md5: 0d693f263a75d8cf7043ce601285a4ae
+      size: 1825
+    params:
+      params.yaml:
+        data_load.raw_data_path: data/raw/iris.csv
+    outs:
+    - path: data/raw/iris.csv
+      hash: md5
+      md5: 942e7cc5c3a9b537f77b7e2133d6b1a3
+      size: 5071
+  validate_data:
+    cmd: python src/data/validate_data.py
+    deps:
+    - path: config/config.py
+      hash: md5
+      md5: 9beefc09e6c403482a748bec5f209d41
+      size: 1923
+    - path: data/raw/iris.csv
+      hash: md5
+      md5: 942e7cc5c3a9b537f77b7e2133d6b1a3
+      size: 5071
+    - path: src/data/validate_data.py
+      hash: md5
+      md5: d643f40bb90653bcd6d2783416269a39
+      size: 3136
+  eda:
+    cmd: python src/eda/generate_eda.py
+    deps:
+    - path: config/config.py
+      hash: md5
+      md5: 9beefc09e6c403482a748bec5f209d41
+      size: 1923
+    - path: data/raw/iris.csv
+      hash: md5
+      md5: 942e7cc5c3a9b537f77b7e2133d6b1a3
+      size: 5071
+    - path: src/eda/generate_eda.py
+      hash: md5
+      md5: bdb5de41f1ef5194a6fe754381f21bd8
+      size: 6762
+    outs:
+    - path: reports/figures/class_distribution.png
+      hash: md5
+      md5: 109ee5f1c7cb257fc79e086670946c5f
+      size: 68828
+    - path: reports/figures/correlation_heatmap.png
+      hash: md5
+      md5: b2ff965e152823ce305f61e7d158462c
+      size: 149342
+    - path: reports/figures/feature_comparison.png
+      hash: md5
+      md5: f7aa5f713c8e7b912f7d7a6d017e8d76
+      size: 173353
+    - path: reports/figures/pairplot_comparison.png
+      hash: md5
+      md5: 84d45bb19fcacf54161114d84a5396cf
+      size: 576867
+  preprocess:
+    cmd: python src/features/preprocess.py
+    deps:
+    - path: config/config.py
+      hash: md5
+      md5: 9beefc09e6c403482a748bec5f209d41
+      size: 1923
+    - path: data/raw/iris.csv
+      hash: md5
+      md5: 942e7cc5c3a9b537f77b7e2133d6b1a3
+      size: 5071
+    - path: src/features/preprocess.py
+      hash: md5
+      md5: 8fc3566bcdfeb6e9fbf390853d9cf023
+      size: 3560
+    params:
+      params.yaml:
+        preprocess.random_state: 42
+        preprocess.stratify: true
+        preprocess.test_size: 0.2
+    outs:
+    - path: data/processed/test.csv
+      hash: md5
+      md5: 50f997cce8325b6c06ae77ca472f3a44
+      size: 628
+    - path: data/processed/train.csv
+      hash: md5
+      md5: 9d882a1fd0a443b350bc48f3b923dd1e
+      size: 2338
+  train_and_evaluate:
+    cmd: python src/models/train.py
+    deps:
+    - path: config/config.py
+      hash: md5
+      md5: 9beefc09e6c403482a748bec5f209d41
+      size: 1923
+    - path: data/processed/test.csv
+      hash: md5
+      md5: 50f997cce8325b6c06ae77ca472f3a44
+      size: 628
+    - path: data/processed/train.csv
+      hash: md5
+      md5: 9d882a1fd0a443b350bc48f3b923dd1e
+      size: 2338
+    - path: src/models/evaluate.py
+      hash: md5
+      md5: 6a2ffb69ca9f7a3cdd03660fa08e1aff
+      size: 3924
+    - path: src/models/train.py
+      hash: md5
+      md5: f4349b676803900cc86daf9303fa5137
+      size: 11392
+    params:
+      params.yaml:
+        mlflow.experiment_name: Iris_Classification_Experiment
+        train.decision_tree:
+          criterion: gini
+          max_depth: 4
+          min_samples_split: 2
+          min_samples_leaf: 1
+          random_state: 42
+        train.random_forest:
+          n_estimators: 100
+          criterion: gini
+          max_depth: 4
+          min_samples_split: 2
+          min_samples_leaf: 1
+          random_state: 42
+    outs:
+    - path: models/best_model.joblib
+      hash: md5
+      md5: f6519a39b5bc8b06d2fab67c7c471a8a
+      size: 150081
+    - path: models/decision_tree.joblib
+      hash: md5
+      md5: 1deb921c01f3617685b381f499f61cb4
+      size: 2753
+    - path: models/model_metadata.json
+      hash: md5
+      md5: 872e321b7b9356fac76d1757a4721bee
+      size: 1013
+    - path: models/random_forest.joblib
+      hash: md5
+      md5: f6519a39b5bc8b06d2fab67c7c471a8a
+      size: 150081
+    - path: reports/metrics.json
+      hash: md5
+      md5: 0570dc17c1c2cd468f6a5aa15908e4a6
+      size: 3648
