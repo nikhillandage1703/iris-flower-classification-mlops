@@ -84,7 +84,7 @@ dvc status
 To inspect runs, parameters, metrics, and confusion matrix artifacts:
 
 ```powershell
-mlflow ui --backend-store-uri sqlite:///mlflow.db --port 5000
+mlflow ui --backend-store-uri sqlite:///mlflow.db --port 5000 --workers 1
 ```
 
 Open your web browser and navigate to:
